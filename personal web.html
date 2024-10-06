@@ -1,0 +1,71 @@
+<html>
+<head><title>login</title>
+<link rel="icon" type="image/png" href="index/icon.png">
+  <title>My Personal Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	min-height: 100vh;
+	background: url(index/mac.jpeg);
+padding: 10px 10px 20px 10px;
+background-size: cover;
+background-position: center;
+color: white
+}
+.wrapper{
+	height: 420px;
+	width: 500px;
+	margin: 0 10px;
+	background: transparent;
+	border: 5px solid rgba(100, 100, 100, .2);
+	border-radius: 20px;
+	padding: 15px 20px;
+	justify-items: center;
+	align-items: center;
+	backdrop-filter: blur(10px);
+/*	border-color: white;*/
+	}
+	input {
+		border: 2px solid rgba(50, 50, 50, .2);
+		background: transparent;
+		border-radius: 10px;
+		height: 30px;
+		padding: 10px;
+		color: white;
+		}
+.btn{
+	border: 2px solid rgba(50, 50, 50, .2);
+	width: 280px;
+	background: transparent;
+	height: 50px;
+	border-radius: 10px;
+	font-size: 20px;
+	color: white;
+}
+h1 {
+color: cyan;
+font-family: "Courier New", monospace;
+font-size: 50px;
+}
+a{
+	color: cyan;
+	text-decoration: none;
+	}
+</style>
+</head>
+<body><center>
+<!--img src="index/icon.png" height="200px" alt="Person in red"> -->
+	<div class="wrapper">
+ <form action="index/website.html" method="post">
+ 	<h1><big>NEXTCOM</big></H1>
+   Username:     <input type="form" name="username" placeholder="Username" required><br><br>
+ Password:  <input type="password" name="password" placeholder="Secret code" required>
+        <br><br><a href="index/website.html"><button type="submit" class="btn">Login</button></a>
+      </form>
+Don't have an account? <a href="index/signup.html">Sign up</a></div></center>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title>Quadratic Equation Solver</title>
+     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Use a blue and white color scheme */
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #0000cd;
+            text-align: center;
+        }
+        p {
+            color: #00008b;
+            margin: 10px;
+        }
+        input {
+            border: 1px solid #00008b;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        button {
+            /* Make the button more professional */
+            background-color: #0000cd;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+        }main{
+        	color: #0000cd;
+            text-align: center;
+            border: 2px solid #00008b;
+            border-radius: 10px;
+}
+    </style>
+    <script>
+        // A function to calculate and display the roots of a quadratic equation
+        function solve() {
+            // Get the values of a, b, and c from the input fields
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var c = parseFloat(document.getElementById("c").value);
+
+            // Calculate the discriminant
+            var d = b * b - 4 * a * c;
+
+            // Check if the discriminant is negative, zero, or positive
+            if (d < 0) {
+                // No real roots, display a message
+                document.getElementById("result").innerHTML = "No real roots";
+            } else if (d == 0) {
+                // One real root, calculate and display it
+                var x = -b / (2 * a);
+                document.getElementById("result").innerHTML = "One real root: x = " + x;
+            } else {
+                // Two real roots, calculate and display them
+                var x1 = (-b + Math.sqrt(d)) / (2 * a);
+                var x2 = (-b - Math.sqrt(d)) / (2 * a);
+                document.getElementById("result").innerHTML = "Two real roots: x1 = " + x1 + ", x2 = " + x2;
+            }
+        }
+    </script>
+</head>
+<body><center>
+    <h1>Quadratic Equation Solver</h1><h5>By AmNotSure</h5>
+    <p>Enter the coefficients of a quadratic equation of the form ax²+bx+c=0 and click the Solve button.</p>
+    <p>
+        a: <input type="number" id="a" value="1"> <br><br>
+        b: <input type="number" id="b" value="-5"> <br><br>
+        c: <input type="number" id="c" value="6"> <br><br>
+        <button onclick="solve()">Solve</button>
+    </p>
+    <main><p id="result"></p></main></center>
+</body>
+</html>
